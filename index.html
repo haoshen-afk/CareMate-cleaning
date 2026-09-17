@@ -1,0 +1,2391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CareMate Cleaning - 24/7 reliable, affordable and high-quality cleaning services."
+    >
+
+    <title>CareMate Cleaning | Your Space, Our Care</title>
+
+    <style>
+        :root {
+            --green: #08783f;
+            --dark-green: #043c27;
+            --deep-green: #022719;
+            --light-green: #e5f6ed;
+            --soft-green: #f3faf6;
+            --lime: #b9ed38;
+            --text: #173126;
+            --muted: #60756b;
+            --white: #ffffff;
+            --border: #d9e9df;
+            --shadow: 0 12px 35px rgba(2, 39, 25, 0.10);
+            --radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            display: inline-block;
+            color: var(--green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.15;
+            color: var(--dark-green);
+            margin-bottom: 14px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            color: var(--dark-green);
+            white-space: nowrap;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .logo span {
+            font-size: 19px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-btn {
+            background: var(--green);
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 999px;
+        }
+
+        .nav-btn:hover {
+            background: var(--dark-green);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(2, 39, 25, 0.94),
+                    rgba(2, 39, 25, 0.70)
+                ),
+                url("https://plain-apac-prod-public.komododecks.com/202609/17/myLxlpSmUpm7A05TDRFd/image.jpg")
+                center/cover no-repeat;
+            color: white;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(185, 237, 56, 0.16);
+            border: 1px solid rgba(185, 237, 56, 0.45);
+            color: var(--lime);
+            padding: 8px 15px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--lime);
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: #edf8f1;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 13px 22px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: var(--lime);
+            color: var(--deep-green);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            color: white;
+            border: 1px solid rgba(255,255,255,0.55);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark-green);
+        }
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            margin-top: -55px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px 22px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: var(--light-green);
+            font-size: 25px;
+        }
+
+        .feature-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 7px;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--soft-green);
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .image-box {
+            overflow: hidden;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .content-label {
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .content h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            color: var(--dark-green);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .content p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 22px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--green);
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           CONCEPT
+        ========================= */
+
+        .concept-card {
+            background: var(--deep-green);
+            color: white;
+            border-radius: 28px;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .concept-card h2 {
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .concept-card p {
+            color: #d9ebe1;
+        }
+
+        .meaning-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .meaning {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            padding: 22px;
+        }
+
+        .meaning h3 {
+            color: var(--lime);
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           USP
+        ========================= */
+
+        .usp {
+            background: var(--soft-green);
+        }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .usp-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .usp-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .usp-card p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            color: var(--dark-green);
+            margin-bottom: 8px;
+        }
+
+        .service-content p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           VISUAL SECTIONS
+        ========================= */
+
+        .visual-section {
+            background: var(--soft-green);
+        }
+
+        .visual-image {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .visual-image img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+        }
+
+        .mini-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .mini-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .mini-card h4 {
+            color: var(--dark-green);
+            margin-bottom: 5px;
+        }
+
+        .mini-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           VALUES
+        ========================= */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .value-card {
+            text-align: center;
+            background: var(--soft-green);
+            padding: 25px 15px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+        }
+
+        .value-card strong {
+            color: var(--dark-green);
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .value-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           OBJECTIVES
+        ========================= */
+
+        .objective-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .objective-item {
+            display: flex;
+            gap: 15px;
+            padding: 18px;
+            border-radius: 16px;
+            background: var(--soft-green);
+            border: 1px solid var(--border);
+        }
+
+        .objective-number {
+            min-width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--green);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+        }
+
+        .objective-item p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .benefit-card {
+            padding: 30px;
+            border-radius: var(--radius);
+            background: var(--dark-green);
+            color: white;
+        }
+
+        .benefit-card h3 {
+            color: var(--lime);
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: #d8e9e0;
+        }
+
+        /* =========================
+           PRICING
+        ========================= */
+
+        .pricing {
+            background: var(--soft-green);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 25px;
+        }
+
+        .price-table,
+        .calculator {
+            background: white;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            padding: 28px;
+        }
+
+        .price-table h3,
+        .calculator h3 {
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row span:last-child {
+            color: var(--green);
+            font-weight: 800;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            outline: none;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--green);
+        }
+
+        .result {
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: 15px;
+            background: var(--light-green);
+            color: var(--dark-green);
+            font-weight: 800;
+            text-align: center;
+        }
+
+        /* =========================
+           PAYMENT
+        ========================= */
+
+        .payment-box {
+            background: var(--deep-green);
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .payment-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .payment-box p {
+            color: #d7e9df;
+            margin-bottom: 22px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .payment-method {
+            background: rgba(255,255,255,0.1);
+            padding: 11px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        /* =========================
+           REVIEWS
+        ========================= */
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .review-card {
+            background: white;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            padding: 25px;
+        }
+
+        .stars {
+            color: #f3b700;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .review-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .reviewer {
+            font-weight: 800;
+            color: var(--dark-green);
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #87988f;
+        }
+
+        /* =========================
+           BOOKING
+        ========================= */
+
+        .booking {
+            background: var(--soft-green);
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .booking-info h2 {
+            font-size: 45px;
+            line-height: 1.15;
+            color: var(--dark-green);
+            margin-bottom: 18px;
+        }
+
+        .booking-info p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .booking-points {
+            list-style: none;
+        }
+
+        .booking-points li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .booking-points li::before {
+            content: "✓";
+            color: var(--green);
+            margin-right: 10px;
+        }
+
+        .booking-form {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .booking-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--deep-green);
+            color: white;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .footer-logo strong {
+            font-size: 20px;
+        }
+
+        footer p {
+            color: #c9ddd2;
+            font-size: 14px;
+        }
+
+        footer h3 {
+            margin-bottom: 14px;
+            color: var(--lime);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #d7e8df;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--lime);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding-top: 20px;
+            text-align: center;
+            color: #a9c2b5;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+            .nav-links {
+                gap: 13px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .review-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 850px) {
+            section {
+                padding: 65px 0;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                padding: 14px 0;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .two-column,
+            .concept-card,
+            .pricing-grid,
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .concept-card {
+                padding: 35px;
+            }
+
+            .usp-grid,
+            .benefit-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .feature-grid,
+            .service-grid,
+            .usp-grid,
+            .benefit-grid,
+            .review-grid,
+            .values-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-box img {
+                height: 300px;
+            }
+
+            .visual-image img {
+                height: 300px;
+            }
+
+            .mini-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .concept-card {
+                padding: 28px 22px;
+            }
+
+            .booking-info h2 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                font-size: 12px;
+                gap: 9px;
+            }
+
+            .logo span {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+    <div class="container nav-inner">
+
+        <!-- CAREMATE LOGO KEPT -->
+        <a href="#home" class="logo">
+            <img
+                src="assets/caremate-logo.png"
+                alt="CareMate Cleaning Logo"
+            >
+            <span>CareMate Cleaning</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#concept">Concept</a>
+            <a href="#services">Services</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#booking" class="nav-btn">Book Now</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                24/7 HIGH-QUALITY CLEANING SERVICE
+            </div>
+
+            <h1>
+                Your Space,<br>
+                <span>Our Care.</span>
+            </h1>
+
+            <p>
+                CareMate Cleaning provides reliable, affordable and
+                professional cleaning services for homes, offices,
+                shops and small businesses.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">
+                    Book a Cleaning
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    Explore Services
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+    <div class="container">
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🕐</div>
+                <h3>24/7 Service</h3>
+                <p>
+                    Flexible cleaning services available
+                    around the clock.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🔧</div>
+                <h3>Professional Team</h3>
+                <p>
+                    Trained and responsible cleaners
+                    who care about every detail.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>High Quality</h3>
+                <p>
+                    Thorough cleaning with consistent
+                    quality standards.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Easy Payment</h3>
+                <p>
+                    FPX, Mastercard and Touch 'n Go
+                    payment options available.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="two-column">
+
+            <div class="image-box">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/74Orsq2L9j1bqE18Dizy/image.jpg"
+                    alt="CareMate professional cleaning service"
+                >
+            </div>
+
+            <div class="content">
+
+                <div class="content-label">
+                    About CareMate
+                </div>
+
+                <h2>
+                    Making Clean Spaces
+                    Easier for Everyone
+                </h2>
+
+                <p>
+                    CareMate Cleaning is a cleaning service company
+                    established in 2026 to provide reliable,
+                    affordable and high-quality cleaning services.
+                </p>
+
+                <p>
+                    We serve homes, offices, shops and small businesses
+                    with general cleaning, deep cleaning and other
+                    cleaning solutions tailored to customer needs.
+                </p>
+
+                <ul class="check-list">
+                    <li>Reliable and professional service</li>
+                    <li>Affordable cleaning solutions</li>
+                    <li>Services tailored to customer needs</li>
+                    <li>Focus on cleanliness and hygiene</li>
+                    <li>Customer satisfaction comes first</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BUSINESS CONCEPT
+========================= -->
+
+<section id="concept">
+
+    <div class="container">
+
+        <div class="concept-card">
+
+            <div>
+                <div class="content-label" style="color:#b9ed38;">
+                    Business Concept
+                </div>
+
+                <h2>
+                    CareMate Cleaning
+                </h2>
+
+                <p>
+                    Our name represents the way we want customers
+                    to experience our service: professional cleaning
+                    with the care and support of a trusted companion.
+                </p>
+            </div>
+
+            <div class="meaning-grid">
+
+                <div class="meaning">
+                    <h3>CARE</h3>
+                    <p>
+                        Taking care of and maintaining the surrounding
+                        environment, while helping to restore areas
+                        that are dirty or poorly maintained.
+                    </p>
+                </div>
+
+                <div class="meaning">
+                    <h3>MATE</h3>
+                    <p>
+                        A friend or companion who is always ready
+                        to help and provide support when needed.
+                    </p>
+                </div>
+
+                <div class="meaning">
+                    <h3>TAGLINE</h3>
+                    <p>
+                        YOUR SPACE, OUR CARE
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     USP
+========================= -->
+
+<section class="usp">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Why CareMate?</span>
+            <h2>Cleaning With More Care</h2>
+            <p>
+                We combine professional service, technology
+                and customer-focused solutions.
+            </p>
+        </div>
+
+        <div class="usp-grid">
+
+            <div class="usp-card">
+                <h3>Professional Service</h3>
+                <p>
+                    Our trained team works professionally,
+                    respectfully and responsibly in every space.
+                </p>
+            </div>
+
+            <div class="usp-card">
+                <h3>Flexible Solutions</h3>
+                <p>
+                    Customers can choose cleaning services
+                    according to their specific needs.
+                </p>
+            </div>
+
+            <div class="usp-card">
+                <h3>Customer Focused</h3>
+                <p>
+                    We listen to customer requirements and
+                    work towards delivering satisfying results.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Our Services</span>
+            <h2>Cleaning Solutions for Every Space</h2>
+            <p>
+                Choose the cleaning service that matches
+                your home or business needs.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/7uclTgzBKPdORZjZQZRJ/image.jpg"
+                    alt="General cleaning service"
+                >
+
+                <div class="service-content">
+                    <h3>General Cleaning</h3>
+                    <p>
+                        Regular cleaning to keep your space
+                        neat, fresh and comfortable.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/WwipvYv3CtA9EK7ainId/image.jpg"
+                    alt="Deep cleaning service"
+                >
+
+                <div class="service-content">
+                    <h3>Deep Cleaning</h3>
+                    <p>
+                        Detailed cleaning for areas that need
+                        extra attention and thorough treatment.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/d4aGs68L64iVXdFVOUm6/image.jpg"
+                    alt="Office cleaning service"
+                >
+
+                <div class="service-content">
+                    <h3>Office Cleaning</h3>
+                    <p>
+                        Maintain a clean, professional and
+                        comfortable working environment.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/4guJmPQzAVKHEJeRzBG4/image.jpg"
+                    alt="Home cleaning service"
+                >
+
+                <div class="service-content">
+                    <h3>Home Cleaning</h3>
+                    <p>
+                        Reliable cleaning solutions designed
+                        to keep homes fresh and comfortable.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/uPOswGCByBM77GLyaz52/image.jpg"
+                    alt="Shop and business cleaning"
+                >
+
+                <div class="service-content">
+                    <h3>Shop & Business Cleaning</h3>
+                    <p>
+                        Cleaning services for shops and small
+                        businesses that need a well-maintained space.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/DiBsA9nNHVDazdtTykvs/image.jpg"
+                    alt="Custom cleaning service"
+                >
+
+                <div class="service-content">
+                    <h3>Custom Cleaning</h3>
+                    <p>
+                        Flexible cleaning solutions based on
+                        individual customer requirements.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TECHNOLOGY
+========================= -->
+
+<section class="visual-section">
+
+    <div class="container">
+
+        <div class="two-column">
+
+            <div class="content">
+
+                <div class="content-label">
+                    Technology
+                </div>
+
+                <h2>
+                    Smart Cleaning,
+                    Better Results
+                </h2>
+
+                <p>
+                    CareMate uses modern cleaning equipment,
+                    organised workflows and technology-supported
+                    service management to improve efficiency.
+                </p>
+
+                <div class="mini-cards">
+
+                    <div class="mini-card">
+                        <h4>Modern Equipment</h4>
+                        <p>
+                            Cleaning tools selected to support
+                            efficient and thorough cleaning.
+                        </p>
+                    </div>
+
+                    <div class="mini-card">
+                        <h4>Digital Management</h4>
+                        <p>
+                            Digital communication and booking
+                            make the service easier for customers.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="visual-image">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/vB9u92sm0Mu9qMZG408q/image.jpg"
+                    alt="Modern cleaning technology"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SUSTAINABILITY
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="two-column">
+
+            <div class="visual-image">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/uGJ00HCdK0AMz539GyCH/image.jpg"
+                    alt="Eco friendly cleaning"
+                >
+            </div>
+
+            <div class="content">
+
+                <div class="content-label">
+                    Sustainability
+                </div>
+
+                <h2>
+                    Cleaning With
+                    Environmental Responsibility
+                </h2>
+
+                <p>
+                    CareMate aims to reduce unnecessary environmental
+                    impact while maintaining high cleaning standards.
+                </p>
+
+                <ul class="check-list">
+                    <li>Eco-friendly cleaning products</li>
+                    <li>Plant-based cleaning products where suitable</li>
+                    <li>Responsible waste disposal</li>
+                    <li>Digital receipts to reduce paper use</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BRAND VALUES
+========================= -->
+
+<section class="visual-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Our Values</span>
+            <h2>What CareMate Stands For</h2>
+            <p>
+                Our values guide the way we serve every customer.
+            </p>
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+                <strong>Quality</strong>
+                <p>
+                    High-quality service with attention to detail.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <strong>Reliability</strong>
+                <p>
+                    Dependable service and clear communication.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <strong>Professionalism</strong>
+                <p>
+                    Responsible and respectful cleaning team.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <strong>Cleanliness</strong>
+                <p>
+                    Thorough cleaning for fresh and hygienic spaces.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <strong>Satisfaction</strong>
+                <p>
+                    Customer needs and expectations come first.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OBJECTIVES
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="two-column">
+
+            <div class="content">
+
+                <div class="content-label">
+                    Our Objectives
+                </div>
+
+                <h2>
+                    Creating Cleaner,
+                    Healthier Spaces
+                </h2>
+
+                <p>
+                    Our objective is not only to clean spaces,
+                    but also to make customers' daily lives
+                    easier and more comfortable.
+                </p>
+
+                <div class="objective-list">
+
+                    <div class="objective-item">
+                        <div class="objective-number">1</div>
+                        <p>
+                            Create healthier and more comfortable
+                            living environments.
+                        </p>
+                    </div>
+
+                    <div class="objective-item">
+                        <div class="objective-number">2</div>
+                        <p>
+                            Provide compassionate deep cleaning
+                            for customers who struggle to maintain
+                            their environment.
+                        </p>
+                    </div>
+
+                    <div class="objective-item">
+                        <div class="objective-number">3</div>
+                        <p>
+                            Deliver high-quality cleaning services
+                            with consistent standards.
+                        </p>
+                    </div>
+
+                    <div class="objective-item">
+                        <div class="objective-number">4</div>
+                        <p>
+                            Provide professionally trained
+                            cleaning services.
+                        </p>
+                    </div>
+
+                    <div class="objective-item">
+                        <div class="objective-number">5</div>
+                        <p>
+                            Help customers save time and effort
+                            while maintaining cleanliness.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="visual-image">
+                <img
+                    src="https://plain-apac-prod-public.komododecks.com/202609/17/1hTAWvp7vtt9vhMEMpDz/image.jpg"
+                    alt="Professional cleaning objective"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BENEFITS
+========================= -->
+
+<section class="visual-section" id="benefits">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Customer Benefits</span>
+            <h2>More Reasons to Choose CareMate</h2>
+            <p>
+                We provide additional benefits to make
+                the customer experience more valuable.
+            </p>
+        </div>
+
+        <div class="benefit-grid">
+
+            <div class="benefit-card">
+                <h3>Referral Rewards</h3>
+                <p>
+                    Customers can enjoy referral rewards
+                    when introducing CareMate to others.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Personalised Cleaning</h3>
+                <p>
+                    Cleaning services can be adjusted according
+                    to individual customer requirements.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Satisfaction Guarantee</h3>
+                <p>
+                    If the cleaning does not meet agreed
+                    expectations, a re-cleaning solution
+                    can be considered.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section class="pricing" id="pricing">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Pricing</span>
+            <h2>Simple & Transparent Pricing</h2>
+            <p>
+                Estimated prices based on property size.
+                Additional charges may apply for late-night services.
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-table">
+
+                <h3>Cleaning Rates</h3>
+
+                <div class="price-row">
+                    <span>Below 800 ft²</span>
+                    <span>RM180</span>
+                </div>
+
+                <div class="price-row">
+                    <span>800–1200 ft²</span>
+                    <span>RM220</span>
+                </div>
+
+                <div class="price-row">
+                    <span>1201–1500 ft²</span>
+                    <span>RM260</span>
+                </div>
+
+                <div class="price-row">
+                    <span>1501–2000 ft²</span>
+                    <span>RM320</span>
+                </div>
+
+                <div class="price-row">
+                    <span>2001–2500 ft²</span>
+                    <span>RM380</span>
+                </div>
+
+                <div class="price-row">
+                    <span>2501–3000 ft²</span>
+                    <span>RM450</span>
+                </div>
+
+                <div class="price-row">
+                    <span>Above 3000 ft²</span>
+                    <span>RM550+</span>
+                </div>
+
+                <br>
+
+                <h3>Night Surcharge</h3>
+
+                <div class="price-row">
+                    <span>6:01 PM – 10:00 PM</span>
+                    <span>+10%</span>
+                </div>
+
+                <div class="price-row">
+                    <span>10:01 PM – 2:00 AM</span>
+                    <span>+20%</span>
+                </div>
+
+                <div class="price-row">
+                    <span>2:01 AM – 7:59 AM</span>
+                    <span>+30%</span>
+                </div>
+
+            </div>
+
+
+            <div class="calculator">
+
+                <h3>Quick Price Calculator</h3>
+
+                <div class="form-group">
+                    <label for="area">
+                        Property Size (ft²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="area"
+                        min="1"
+                        placeholder="Example: 1200"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="time">
+                        Cleaning Time
+                    </label>
+
+                    <select id="time">
+                        <option value="0">
+                            8:00 AM – 6:00 PM
+                        </option>
+
+                        <option value="10">
+                            6:01 PM – 10:00 PM (+10%)
+                        </option>
+
+                        <option value="20">
+                            10:01 PM – 2:00 AM (+20%)
+                        </option>
+
+                        <option value="30">
+                            2:01 AM – 7:59 AM (+30%)
+                        </option>
+                    </select>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    type="button"
+                    onclick="calculatePrice()"
+                    style="width:100%;"
+                >
+                    Calculate Price
+                </button>
+
+                <div class="result" id="result">
+                    Enter your property size to calculate.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAYMENT
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="payment-box">
+
+            <h2>Easy & Flexible Payment</h2>
+
+            <p>
+                Choose a payment method that is convenient for you.
+            </p>
+
+            <div class="payment-methods">
+
+                <div class="payment-method">
+                    FPX Online Banking
+                </div>
+
+                <div class="payment-method">
+                    Mastercard
+                </div>
+
+                <div class="payment-method">
+                    Touch 'n Go
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section id="reviews">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Customer Reviews</span>
+            <h2>What Our Customers Say</h2>
+            <p>
+                Feedback from customers who have experienced
+                CareMate cleaning services.
+            </p>
+        </div>
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Very good services provided, cleaner very
+                    helpful and multitask, definitely will hire
+                    them again.”
+                </p>
+
+                <div class="reviewer">
+                    Alya233
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Very friendly, very professional, always
+                    quick to reply when I WhatsApp, very hard
+                    workers, left the house clean and smelling
+                    fresh. We are hiring them regularly.”
+                </p>
+
+                <div class="reviewer">
+                    Masinah Ayu 87
+                </div>
+
+                <div class="review-date">
+                    20 March 2026
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “The cleaner did an amazing job. I didn’t
+                    need to monitor at all. The house was clean,
+                    tidy, and very well dusted. I’m truly
+                    satisfied with the service. Keep shining!”
+                </p>
+
+                <div class="reviewer">
+                    Shin Shu Yen
+                </div>
+
+                <div class="review-date">
+                    14 April 2026
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Great service 👏🏻 the workers and staff
+                    are friendly! well done and recommended”
+                </p>
+
+                <div class="reviewer">
+                    Dhelmirash
+                </div>
+
+                <div class="review-date">
+                    20 April 2026
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “I have booked Deep cleaning service for
+                    my flat and I am fully satisfied with the
+                    service and staff behavior, they have done
+                    the work very professional manner.”
+                </p>
+
+                <div class="reviewer">
+                    Kumar
+                </div>
+
+                <div class="review-date">
+                    10 May 2026
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BOOKING
+========================= -->
+
+<section class="booking" id="booking">
+
+    <div class="container">
+
+        <div class="booking-grid">
+
+            <div class="booking-info">
+
+                <div class="content-label">
+                    Book a Service
+                </div>
+
+                <h2>
+                    Let CareMate
+                    Handle the Cleaning
+                </h2>
+
+                <p>
+                    Tell us what you need and our team will
+                    help you choose a suitable cleaning solution.
+                </p>
+
+                <ul class="booking-points">
+                    <li>Professional cleaning team</li>
+                    <li>Flexible cleaning solutions</li>
+                    <li>24/7 service availability</li>
+                    <li>Customer-focused service</li>
+                </ul>
+
+            </div>
+
+
+            <form
+                class="booking-form"
+                onsubmit="submitBooking(event)"
+            >
+
+                <div class="form-group">
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                        placeholder="Your name"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                        placeholder="Your phone number"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="service">
+                        Service
+                    </label>
+
+                    <select id="service" required>
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option>
+                            General Cleaning
+                        </option>
+
+                        <option>
+                            Deep Cleaning
+                        </option>
+
+                        <option>
+                            Home Cleaning
+                        </option>
+
+                        <option>
+                            Office Cleaning
+                        </option>
+
+                        <option>
+                            Shop & Business Cleaning
+                        </option>
+
+                        <option>
+                            Custom Cleaning
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="date">
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">
+                        Additional Information
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us more about your cleaning needs..."
+                    ></textarea>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width:100%;"
+                >
+                    Submit Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <img
+                        src="assets/caremate-logo.png"
+                        alt="CareMate Cleaning Logo"
+                    >
+
+                    <strong>
+                        CareMate Cleaning
+                    </strong>
+
+                </div>
+
+                <p>
+                    Your Space, Our Care.
+                    Reliable, affordable and high-quality
+                    cleaning services for homes and businesses.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#pricing">Pricing</a>
+                    </li>
+
+                    <li>
+                        <a href="#reviews">Reviews</a>
+                    </li>
+
+                    <li>
+                        <a href="#booking">Book Now</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>CareMate</h3>
+
+                <p>
+                    24/7 Cleaning Service
+                </p>
+
+                <p>
+                    Professional Team
+                </p>
+
+                <p>
+                    Customer-Focused Solutions
+                </p>
+
+                <p>
+                    Eco-Friendly Approach
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 CareMate Cleaning.
+            All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function calculatePrice() {
+
+        const area =
+            Number(document.getElementById("area").value);
+
+        const surcharge =
+            Number(document.getElementById("time").value);
+
+        const result =
+            document.getElementById("result");
+
+        if (!area || area <= 0) {
+
+            result.textContent =
+                "Please enter a valid property size.";
+
+            return;
+        }
+
+        let basePrice = 0;
+
+        if (area < 800) {
+            basePrice = 180;
+        }
+
+        else if (area <= 1200) {
+            basePrice = 220;
+        }
+
+        else if (area <= 1500) {
+            basePrice = 260;
+        }
+
+        else if (area <= 2000) {
+            basePrice = 320;
+        }
+
+        else if (area <= 2500) {
+            basePrice = 380;
+        }
+
+        else if (area <= 3000) {
+            basePrice = 450;
+        }
+
+        else {
+            basePrice = 550;
+        }
+
+        const finalPrice =
+            basePrice + (basePrice * surcharge / 100);
+
+        result.innerHTML =
+            "Estimated Price: <strong>RM" +
+            finalPrice.toFixed(2) +
+            "</strong>";
+
+    }
+
+
+    function submitBooking(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const service =
+            document.getElementById("service").value;
+
+        alert(
+            "Thank you, " +
+            name +
+            "! Your booking request for " +
+            service +
+            " has been received."
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
